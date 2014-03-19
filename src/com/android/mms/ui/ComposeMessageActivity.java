@@ -2040,6 +2040,8 @@ public class ComposeMessageActivity extends Activity
 
         initialize(savedInstanceState, 0);
 
+        mMultiSensorManager = new MultiSensorManager((Context) ComposeMessageActivity.this, this);
+
         if (TRACE) {
             android.os.Debug.startMethodTracing("compose");
         }
