@@ -78,7 +78,6 @@ public class MessagingPreferenceActivity extends PreferenceActivity
     public static final String GROUP_MMS_MODE           = "pref_key_mms_group_mms";
     public static final String MMS_SAVE_LOCATION        = "pref_save_location";
     public static final String MSG_SIGNATURE            = "pref_msg_signature";
-    public static final String MMS_BREATH               = "mms_breath";
 
     // Emoji
     public static final String ENABLE_EMOJIS             = "pref_key_enable_emojis";
@@ -201,7 +200,6 @@ public class MessagingPreferenceActivity extends PreferenceActivity
 
     private EditTextPreference mSignature;
     private String mSignatureText;
-    private CheckBoxPreference mMMSBreath;
     private Preference mTextAreaSize;
 
     // Blacklist
@@ -279,7 +277,6 @@ public class MessagingPreferenceActivity extends PreferenceActivity
         mEnableQmCloseAllPref.setEnabled(mIsSmsEnabled);
         mDirectCall.setEnabled(mIsSmsEnabled);
         mSignature.setEnabled(mIsSmsEnabled);
-        mMMSBreath.setEnabled(mIsSmsEnabled);
         mTextAreaSize.setEnabled(mIsSmsEnabled);
         mBlacklist.setEnabled(mIsSmsEnabled);
         mEnableEmojis.setEnabled(mIsSmsEnabled);
@@ -353,9 +350,6 @@ public class MessagingPreferenceActivity extends PreferenceActivity
         mMessageFontSize = (ListPreference) findPreference(MESSAGE_FONT_SIZE);
 
         mUserAgent = (UserAgentListPreference) findPreference(USER_AGENT);
-
-        mMMSBreath = (CheckBoxPreference) findPreference(MMS_BREATH);
-        mMMSBreath.setChecked(mMMSBreath.isChecked());
 
         mSignature = (EditTextPreference) findPreference(MSG_SIGNATURE);
         mSignature.setOnPreferenceChangeListener(this);
@@ -658,9 +652,6 @@ public class MessagingPreferenceActivity extends PreferenceActivity
 
             // Update "enable quickmessage" checkbox state
             mEnableQuickMessagePref.setEnabled(!mEnablePrivacyModePref.isChecked());
-
-        } else if (preference == mMMSBreath) {
-            mMMSBreath.setChecked(mMMSBreath.isChecked());
 
         } else if (preference == mTextAreaSize) {
             new NumberPickerDialog(this,

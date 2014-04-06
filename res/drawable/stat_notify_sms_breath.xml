@@ -30,10 +30,7 @@
     <item android:duration="80" android:drawable="@drawable/stat_notify_sms_14" />
     <item android:duration="80" android:drawable="@drawable/stat_notify_sms_13" />
     <item android:duration="80" android:drawable="@drawable/stat_notify_sms_12" />
-<<<<<<< HEAD
-=======
     <item android:duration="80" android:drawable="@drawable/stat_notify_sms_11" />
->>>>>>> a8bd18a... [2/4] Mms: Breathing missedcall/sms/voicemail
     <item android:duration="80" android:drawable="@drawable/stat_notify_sms_10" />
     <item android:duration="80" android:drawable="@drawable/stat_notify_sms_9" />
     <item android:duration="80" android:drawable="@drawable/stat_notify_sms_8" />
