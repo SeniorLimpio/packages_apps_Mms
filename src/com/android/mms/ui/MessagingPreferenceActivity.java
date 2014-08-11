@@ -670,9 +670,6 @@ public class MessagingPreferenceActivity extends PreferenceActivity
             // Update the actual "enable heads up mode" value that is stored in secure settings.
             enableHeadsUpMode(mEnableHeadsUpModePref.isChecked(), this);
 
-        } else if (preference == mMMSBreath) {
-            mMMSBreath.setChecked(mMMSBreath.isChecked());
-
         } else if (preference == mTextAreaSize) {
             new NumberPickerDialog(this,
                     mTextAreaSizeListener,
